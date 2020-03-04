@@ -1,0 +1,70 @@
+/* slide second last text overlap on image */
+
+/* get our dream home now css start */
+
+/* Container holding the image and the text */
+.container {
+    position: relative;
+    text-align: center;
+    /* color: white; */
+    height: 80%;
+  }
+  
+  
+  
+  
+  /* Centered text */
+  .centered-top {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:white;
+  
+  }
+  /* Centered text */
+  .centered {
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    
+  }
+  
+  /* get our dream home now css end */
+  
+
+
+
+  /* current job opportunities start */
+  /* .accordion .card-header:after {
+    font-family: 'FontAwesome';  
+    content: "\f068";
+    float: right; 
+}
+.accordion .card-header.collapsed:after {
+    content: "\f067"; 
+} */
+
+
+
+
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+.panel-title > a:before {
+    float: left !important;
+    font-family: FontAwesome;
+    content:"\f068";
+    padding-right: 5px;
+}
+.panel-title > a.collapsed:before {
+    float: left !important;
+    content:"\f067";
+}
+.panel-title > a:hover, 
+.panel-title > a:active, 
+.panel-title > a:focus  {
+    text-decoration:none;
+}
+  /* current job opportunities end */
