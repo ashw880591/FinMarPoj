@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-title',
@@ -7,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TitleComponent implements OnInit {
 
-  constructor() { }
+  constructor(private titlerouter:Router) { }
 
+  GoToOverviewPage(){
+    this.titlerouter.navigate(['/overview'])
+  }
   ngOnInit() {
   }
 

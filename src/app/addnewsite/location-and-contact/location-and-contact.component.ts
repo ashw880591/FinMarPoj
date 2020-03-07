@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-location-and-contact',
@@ -7,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LocationAndContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route:Router) { }
 
+  GoToGalleryPage(){
+    this.route.navigate(['/gallery'])
+  }
+  GoBackToLoactionPage(){
+    this.route.navigate(['/architects'])
+  }
   ngOnInit() {
   }
 

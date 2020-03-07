@@ -5,7 +5,6 @@ import { TitleComponent } from './title.component';
 
 const routes: Routes = [
     {path:'',component:TitleComponent} 
-        // {path:'dashboard',component:DashboardComponent}
     
     
 ];

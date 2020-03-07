@@ -5,9 +5,7 @@ import { OverviewComponent } from './overview.component';
 
 const routes: Routes = [
   { path: '', component: OverviewComponent }
-  // {path:'dashboard',component:DashboardComponent}
-
-
+  
 ];
 
 @NgModule({

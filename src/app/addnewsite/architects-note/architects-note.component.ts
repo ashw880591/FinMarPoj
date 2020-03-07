@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-architects-note',
@@ -7,8 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArchitectsNoteComponent implements OnInit {
 
-  constructor() { }
+  constructor(private titlerouter:Router) { }
 
+  GoBackToOverviewPage(){
+    this.titlerouter.navigate(['/overview'])
+  }
+
+  GoToLocationPage(){
+    this.titlerouter.navigate(['/location'])
+  }
   ngOnInit() {
   }
 

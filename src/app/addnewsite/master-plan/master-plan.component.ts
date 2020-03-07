@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-master-plan',
@@ -7,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MasterPlanComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route:Router) { }
 
+  GoToFloorPlanPage(){
+    this.route.navigate(['/floorplan'])
+  }
+  GoBackToGalleryPage(){
+    this.route.navigate(['/gallery'])
+  }
   ngOnInit() {
   }
 

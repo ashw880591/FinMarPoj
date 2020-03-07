@@ -1,16 +1,16 @@
     <div id="what-we-do">
     <div class="container"  >
-        <div class="card" style="width:1200px;">
+        <div class="card" >
             <div class="card-body" >
                 <div class="row">
                    <h3>Site Title Details</h3>
-                    <div class="col-sm-3 form-group">
+                    <div class="col-sm-4 form-group">
                         <label for="">Site Name</label>
                         <input type="text" name="siteName" placeholder="Enter Site Name" class="form-control">
                     </div>
-                    <div class="form-group col-sm-3">
+                    <div class="form-group col-sm-4">
                         <label for="">Project Type</label>
-                        <select class=" form-control" placeholder="Enter Project Type" formControlName="projectType">
+                        <select class=" form-control" placeholder="Enter Project Type" >
                             <option value="">Project 1</option>
                             <option value="2-wheeler">Project 2 </option>
                             <option value="3-wheeler">Project 3 </option>
@@ -18,7 +18,7 @@
                             <option value="6-wheeler">Project 6 </option>
                         </select>
                     </div>
-                    <div class="col-sm-3 form-group">
+                    <div class="col-sm-4 form-group">
                         <label for="">Site Location</label>
                         <input type="text" name="siteLocation" placeholder="Enter Site Location" class="form-control">
                     </div>
@@ -27,10 +27,9 @@
                     <div class="col-sm-12">
                         <label for="">Site Apartment Types</label>
                     </div>
-
                 </div>
                 <div class="row">
-                    <div class="col-sm-8 form-group">
+                    <div class="col-sm-12 form-group">
                         <input type="checkbox" name="" id="">&nbsp;Single Room &nbsp;
                         <input type="checkbox" name="" id="">&nbsp;1 RK &nbsp;
                         <input type="checkbox" name="" id="">&nbsp;1 BHK &nbsp;
@@ -41,10 +40,9 @@
                         <input type="checkbox" name="" id="">&nbsp;3.5 BHK &nbsp;
                         <input type="checkbox" name="" id="">&nbsp;4 BHK &nbsp;
                     </div>
-
                 </div>
                 <div class="row">
-                    <div class="col-sm-8 form-group">
+                    <div class="col-sm-12 form-group">
 
                         <input type="checkbox" name="" id="">&nbsp;4.5 BHK &nbsp;
                         <input type="checkbox" name="" id="">&nbsp;Row House &nbsp;
@@ -57,33 +55,26 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-8 form-group">
+                    <div class="col-sm-12 form-group">
                         <input type="checkbox" name="" id="">&nbsp;Commercial Building &nbsp;
 
                         <input type="checkbox" name="" id="">&nbsp;Industrial Project &nbsp;
                         <input type="checkbox" name="" id="">&nbsp;Company &nbsp;
-
-
                     </div>
                 </div>
-
-
-
-                <div class="col-sm-3 form-group">
+                <div class="col-sm-4 form-group">
                     <label for="">MAHA RERA Reg. No.</label>
                     <input type="text" name="siteName" placeholder="Enter MAHA RERA Reg. No." class="form-control">
                 </div>
-                <div class="col-sm-3 form-group"></div>
-                <div class="col-sm-3 form-group">
+                <div class="col-sm-4 form-group"></div>
+                <div class="col-sm-4 form-group">
                     <label for="">CREDAI MEMBER Reg. No.</label>
                     <input type="text" name="siteName" placeholder="Enter CREDAI MEMBER Reg. No." class="form-control">
                 </div>
             </div>
-        </div>
         <div class="">
-            <button type="submit" class="btn btn-success" style="margin-left: 40%;">SAVE & NEXT></button>
+            <button type="submit" class="btn btn-success" routerLink="overview" (click)="GoToOverviewPage()">SAVE & NEXT></button>
         </div>
-        <br>
     </div>
-   
+    </div>
 </div>
