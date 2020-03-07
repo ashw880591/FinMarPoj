@@ -19,9 +19,9 @@ export class MainsliderComponent implements OnInit {
     this.RegistrationForm = new FormGroup({
       tagline: new FormControl('', Validators.required),
       category: new FormControl('', Validators.required),
+      projectname: new FormControl('', Validators.required),
       description1: new FormControl('', Validators.required),
       description2: new FormControl('', Validators.required),
-      projectname: new FormControl('', Validators.required),
       enquiry: new FormControl('', Validators.required),
       // image: new FormControl('',Validators.required),
     })

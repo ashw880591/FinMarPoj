@@ -1,26 +1,40 @@
     <div id="what-we-do">
-    <div class="container"  >
-        <div class="card" >
+    <div class="container">
+        <div class="card">
+            <form action=""[formGroup]="ProjectTitle">
             <div class="card-body" >
                 <div class="row">
                    <h3>Site Title Details</h3>
                     <div class="col-sm-4 form-group">
                         <label for="">Site Name</label>
-                        <input type="text" name="siteName" placeholder="Enter Site Name" class="form-control">
+                        <input type="text" name="site_name" placeholder="Enter Site Name" class="form-control" formControlName="site_name">
+                        <div class="validation" *ngIf="ProjectTitle.controls['site_name'].hasError('required')
+                        && (ProjectTitle.controls['site_name'].touched||ProjectTitle.controls['site_name'].dirty)">
+                        <b>This field is requried</b>
+                      </div> 
                     </div>
                     <div class="form-group col-sm-4">
                         <label for="">Project Type</label>
-                        <select class=" form-control" placeholder="Enter Project Type" >
-                            <option value="">Project 1</option>
-                            <option value="2-wheeler">Project 2 </option>
-                            <option value="3-wheeler">Project 3 </option>
-                            <option value="4-wheeler">Project 4 </option>
-                            <option value="6-wheeler">Project 6 </option>
+                        <select class=" form-control" placeholder="Enter Project Type" formControlName="project_name" >
+                            <option value="">Select Project Type</option>
+                            <option value="Project 1">Project 1 </option>
+                            <option value="Project 2">Project 2 </option>
+                            <option value="Project 3">Project 3 </option>
+                            <option value="Project 4">Project 4 </option>
                         </select>
+
+                        <div class="validation" *ngIf="ProjectTitle.controls['project_name'].hasError('required')
+                        && (ProjectTitle.controls['project_name'].touched||ProjectTitle.controls['project_name'].dirty)">
+                        <b>This field is requried</b>
+                      </div> 
                     </div>
                     <div class="col-sm-4 form-group">
                         <label for="">Site Location</label>
-                        <input type="text" name="siteLocation" placeholder="Enter Site Location" class="form-control">
+                        <input type="text" name="site_location" placeholder="Enter Site Location" class="form-control" formControlName="site_location">
+                        <div class="validation" *ngIf="ProjectTitle.controls['site_location'].hasError('required')
+                        && (ProjectTitle.controls['site_location'].touched||ProjectTitle.controls['site_location'].dirty)">
+                        <b>This field is requried</b>
+                      </div>
                     </div>
                 </div>
                 <div class="row">
@@ -43,7 +57,6 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-12 form-group">
-
                         <input type="checkbox" name="" id="">&nbsp;4.5 BHK &nbsp;
                         <input type="checkbox" name="" id="">&nbsp;Row House &nbsp;
                         <input type="checkbox" name="" id="">&nbsp;Bunglow&nbsp;
@@ -64,16 +77,25 @@
                 </div>
                 <div class="col-sm-4 form-group">
                     <label for="">MAHA RERA Reg. No.</label>
-                    <input type="text" name="siteName" placeholder="Enter MAHA RERA Reg. No." class="form-control">
+                    <input type="text" name="maha_rera_reg_no" placeholder="Enter MAHA RERA Reg. No." class="form-control" formControlName="maha_rera_reg_no">
+                    <div class="validation" *ngIf="ProjectTitle.controls['maha_rera_reg_no'].hasError('required')
+                    && (ProjectTitle.controls['maha_rera_reg_no'].touched||ProjectTitle.controls['maha_rera_reg_no'].dirty)">
+                    <b>This field is requried</b>
+                  </div>
                 </div>
                 <div class="col-sm-4 form-group"></div>
                 <div class="col-sm-4 form-group">
                     <label for="">CREDAI MEMBER Reg. No.</label>
-                    <input type="text" name="siteName" placeholder="Enter CREDAI MEMBER Reg. No." class="form-control">
+                    <input type="text" name="siteName" placeholder="Enter CREDAI MEMBER Reg. No." class="form-control" formControlName="credai_member_reg_no">
+                    <div class="validation" *ngIf="ProjectTitle.controls['credai_member_reg_no'].hasError('required')
+                    && (ProjectTitle.controls['credai_member_reg_no'].touched||ProjectTitle.controls['credai_member_reg_no'].dirty)">
+                    <b>This field is requried</b>
+                  </div>
                 </div>
             </div>
+            </form>
         <div class="">
-            <button type="submit" class="btn btn-success" routerLink="overview" (click)="GoToOverviewPage()">SAVE & NEXT></button>
+            <button type="submit" class="btn btn-success" (click)="saveAction(ProjectTitle.value)">SAVE & NEXT></button>
         </div>
     </div>
     </div>

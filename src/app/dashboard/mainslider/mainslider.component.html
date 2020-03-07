@@ -1,4 +1,4 @@
-
+<!-- 
     <div class="row">
       <div class="col-sm-4 col-md-4 col-xs-4"></div>
       <div class="col-sm-4 col-md-4 col-xs-4">
@@ -60,11 +60,6 @@
   
               </div>
   
-  
-             
-  
-  
-  
               <div class="row">
                 <div class="col-md-4"></div>
                 <div class="button_group">
@@ -78,13 +73,13 @@
       </div>
       <div class="col-sm-4 col-md-4 col-xs-4"></div>
     </div>
-  </div> -->
+  
 
-
+ -->
 
 
 <div class="container" id="what-we-do">
-  <form action="">
+  <form action="" [formGroup]="RegistrationForm">
     <h1 style="color: white;">Main Slider Projects</h1>
     <button type="submit" class="btn btn-success" style="margin-left: 70%;" data-toggle="modal" data-target="#myModal">Add
       Slider Project</button>
@@ -98,12 +93,19 @@
               <div class="row" style="margin-top: 80px;">
                 <div id="what-we-do">
                   <form id="what-we-do" action="" method="post">
-
                     <div class="col-md-6">
                       <fieldset>
-                        <input name="name" type="text" class="form-control" id="name" placeholder=" Enter Tagline..."
-                          required>
+                        <input name="tagline" type="text" class="form-control" id="tagline" placeholder=" Enter Tagline..."
+                          required formControlName="tagline">
+                          <div class="validation" *ngIf="RegistrationForm.controls['tagline'].hasError('required')
+                          && (RegistrationForm.controls['tagline'].touched||RegistrationForm.controls['tagline'].dirty)">
+                          <b>This Field is requried</b>
+                      </div>
+                      <div class="validation" *ngIf="RegistrationForm.controls['tagline'].hasError('pattern')">
+                          <b>Invalid contact number</b>
+                      </div> 
                       </fieldset><br>
+                     
                     </div>
                     <div class="col-md-6">
                       <fieldset>
@@ -111,41 +113,52 @@
                           required>
                       </fieldset><br>
                     </div>
-
                     <div class="col-sm-6">
-                      <select id="category" class="  form-rounded form-control myinputcss col-sm-12 "
-                        placeholder="select category" formControlName="category">
-                        <option value="">Select Service Type</option>
+                      <select id="category" class="form-rounded form-control myinputcss col-sm-12 "
+                        placeholder="select project" formControlName="category">
+                        <option value="">Select Category</option>
                         <option value="washing">wash</option>
                         <option value="maintenance">Maintenance</option>
                         <option value="wash">Wash/Maintenance</option>
                         <option value="others">Other</option>
                         <option value="cancel">Cancel</option>
                       </select>
-
-
+                      <div class="validation" *ngIf="RegistrationForm.controls['category'].hasError('required')
+                      && (RegistrationForm.controls['category'].touched||RegistrationForm.controls['category'].dirty)">
+                      <b>This Field is requried</b>
+                  </div>
+                  <div class="validation" *ngIf="RegistrationForm.controls['category'].hasError('pattern')">
+                      <b>Invalid contact number</b>
+                  </div> 
                     </div>
                     <div class="col-sm-6">
-                      <select id="category" class="  form-rounded form-control myinputcss col-sm-12 "
-                        placeholder="select category" formControlName="category">
-                        <option value="">Select Service Type</option>
+                      <select id="projectname" class="form-rounded form-control myinputcss col-sm-12 "
+                        placeholder="select project" formControlName="projectname">
+                        <option value="">Select Project</option>
                         <option value="washing">wash</option>
                         <option value="maintenance">Maintenance</option>
                         <option value="wash">Wash/Maintenance</option>
                         <option value="others">Other</option>
                         <option value="cancel">Cancel</option>
                       </select>
+                      <div class="validation" *ngIf="RegistrationForm.controls['projectname'].hasError('required')
+                      && (RegistrationForm.controls['projectname'].touched||RegistrationForm.controls['projectname'].dirty)">
+                      <b>This Field is requried</b>
+                  </div>
+                  <div class="validation" *ngIf="RegistrationForm.controls['projectname'].hasError('pattern')">
+                      <b>Invalid contact number</b>
+                  </div> 
                     </div>
                     <div class="col-md-12" style="margin-top: 20px;">
                       <fieldset>
                         <textarea name="message" rows="1" class="form-control" id="message"
-                          placeholder="Enter Description 1..." required></textarea>
+                          placeholder="Enter Description 1..." required formCotrolName="description1"></textarea>
                       </fieldset><br>
                     </div>
                     <div class="col-md-12">
                       <fieldset>
                         <textarea name="message" rows="1" class="form-control" id="message"
-                          placeholder="Enter Description 2..." required></textarea>
+                          placeholder="Enter Description 2..." required formCotrolName="description2"></textarea>
                       </fieldset><br>
                       <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
@@ -159,7 +172,6 @@
                         </div>
                       </fieldset>
                     </div>
-
                   </form>
                 </div>
               </div>
