@@ -4,9 +4,9 @@ import { LocationAndContactComponent } from './location-and-contact.component';
 
 
 const routes: Routes = [
-    {path:'',component:LocationAndContactComponent} 
-    
-    
+  { path: '', component: LocationAndContactComponent }
+
+
 ];
 
 @NgModule({

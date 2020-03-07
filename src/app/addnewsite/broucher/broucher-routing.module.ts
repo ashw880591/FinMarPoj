@@ -4,9 +4,9 @@ import { BroucherComponent } from './broucher.component';
 
 
 const routes: Routes = [
-    {path:'',component:BroucherComponent} 
-    
-    
+  { path: '', component: BroucherComponent }
+
+
 ];
 
 @NgModule({

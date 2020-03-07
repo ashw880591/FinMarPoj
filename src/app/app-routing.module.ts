@@ -1,36 +1,23 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { WhoWeAreComponent } from './who-we-are/who-we-are.component';
-import { WhatWeDoComponent } from './what-we-do/what-we-do.component';
-import { CareerComponent } from './career/career.component';
-import { ResidentialsComponent } from './what-we-do/residentials/residentials.component';
-import { HospitalityComponent } from './what-we-do/hospitality/hospitality.component';
-import { IndustrialComponent } from './what-we-do/industrial/industrial.component';
-import { EducationComponent } from './what-we-do/education/education.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
-import { OurProjectComponent } from './our-project/our-project.component';
-import { GalleryComponent } from './our-project/gallery/gallery.component';
-import { OurprojectnameComponent } from './ourprojectname/ourprojectname.component';
-import { NriSectionComponent } from './nri-section/nri-section.component';
-import { InvesterSectionComponent } from './invester-section/invester-section.component';
+
 
 const routes: Routes = [
-  { path: 'Home', component: HomeComponent },
+  { path: 'Home',loadChildren:'./home/home.module#HomeModule' },
   { path: '', redirectTo: 'Home', pathMatch: 'full' },
-  { path: 'WhoWeAre', component: WhoWeAreComponent },
-  { path: 'WhatWeDo', component: WhatWeDoComponent },
-  { path: 'Residentials', component: ResidentialsComponent },
-  { path: 'Hospitality', component: HospitalityComponent },
-  { path: 'Industrial', component: IndustrialComponent },
-  { path: 'Education', component: EducationComponent },
-  { path: 'OurProject', component: OurProjectComponent },
-  { path: 'Gallery', component: GalleryComponent },
-  { path: 'Career', component: CareerComponent },
-  { path: 'ContactUs', component: ContactUsComponent },
-  { path: 'NriSection', component: NriSectionComponent },
-  { path: 'InvesrerSection', component: InvesterSectionComponent },
-  { path: 'OurProjectName', component: OurprojectnameComponent },
+  { path: 'WhoWeAre', loadChildren:'./who-we-are/who-we-are.module#WhoWeAreModule' },
+  { path: 'WhatWeDo', loadChildren:'./what-we-do/what-we-do.module#WhatWeDoModule' },
+  { path: 'Residentials', loadChildren:'./what-we-do/residentials/residentials.module#ResidentialsModule' },
+  { path: 'Hospitality', loadChildren:'./what-we-do/hospitality/hospitality.module#HospitalityModule' },
+  { path: 'Industrial', loadChildren:'./what-we-do/industrial/industrial.module#IndustrialModule'},
+  { path: 'Education',  loadChildren:'./what-we-do/education/education.module#EducationModule'},
+  { path: 'OurProject', loadChildren:'./our-project/our-project-module#OurProjectModule' },
+  { path: 'Gallery', loadChildren:'./our-project/gallery/gallery.module#GalleryModule' },
+  { path: 'Career', loadChildren:'./career/career.module#CareerModule' },
+  { path: 'ContactUs', loadChildren:'./contact-us/contact-us.module#ContactUsModule' },
+  { path: 'NriSection', loadChildren:'./nri-section/nri-section.module#NriSectionModule' },
+  { path: 'InvesrerSection', loadChildren:'./invester-section/invester-section.module#InvesterSectionModule' },
+  { path: 'OurProjectName', loadChildren:'./ourprojectname/ourprojectname.module#OurProjectNameModule' },
   // {
   //   path: "Admin",
   //   loadChildren: './Admin/MainSlider/Admin.module#AdminModule'

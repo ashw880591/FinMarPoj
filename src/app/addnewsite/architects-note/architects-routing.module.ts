@@ -4,9 +4,9 @@ import { ArchitectsNoteComponent } from './architects-note.component';
 
 
 const routes: Routes = [
-    {path:'',component:ArchitectsNoteComponent} 
-    
-    
+  { path: '', component: ArchitectsNoteComponent }
+
+
 ];
 
 @NgModule({

@@ -84,102 +84,93 @@
 
 
 
-  <div class="container">
-    <form action="">
-      <h1 style="color: red;">Main Slider Projects</h1>
-      <button type="submit" class="btn btn-success" style="float: right;" data-toggle="modal" data-target="#myModal">Add
-        Slider Project</button>
-      <div class="modal fade" id="myModal" role="dialog">
+<div class="container">
+  <form action="">
+    <h1 style="color: red;">Main Slider Projects</h1>
+    <button type="submit" class="btn btn-success" style="float: right;" data-toggle="modal" data-target="#myModal">Add
+      Slider Project</button>
+    <div class="modal fade" id="myModal" role="dialog" style="margin-top: 90px;">
+      <div class="modal-dialog">
+        <!-- Modal content-->
         <div class="modal-content">
           <div class="row">
-            <div class="col-sm-3"></div>
-            <div class="jumbotron container-fliud image" style="margin-top: 90px;">
-  
-              <div class="row">
-                <div class="col-sm-2"></div>
-                <div class="col-sm-4 col-md-4 col-xs-4">
-                  <form [formGroup]="RegistrationForm">
-  
-                    <div class="card image1">
-                      <div class="card-body">
-                        <h1 style="color: white">Main Slider</h1>
-  
-                        <div class="form-group input-group-lg">
-                          <label for="tagline"></label>
-                          <input type="text" id="tagline" class="form-control" placeholder="tagline"
-                            formControlName="tagline">
-                        </div>
-                        <div class="form-group input-group-lg" style="margin-top: 40px;">
-                          <div class="col-sm-5"></div>
-                          <select id="category"
-                            class=" alert form-rounded form-control myinputcss col-sm-12 form-control-lg"
-                            placeholder="select category" formControlName="category">
-                            <option value="">Select Service Type</option>
-                            <option value="washing">wash</option>
-                            <option value="maintenance">Maintenance</option>
-                            <option value="wash">Wash/Maintenance</option>
-                            <option value="others">Other</option>
-                            <option value="cancel">Cancel</option>
-                          </select>
-  
-  
-                        </div>
-  
-  
-  
-                        <div class="form-group input-group-lg" style="margin-top: 40px;">
-                          <div class="col-sm-5"></div>
-                          <select id="inputState"
-                            class=" alert form-rounded form-control myinputcss col-sm-12 form-control-lg"
-                            placeholder="project name" formControlName="projectname">
-                            <option value="">Select Service Type</option>
-                            <option value="washing">wash</option>
-  
-                            <option value="maintenance">Maintenance</option>
-                            <option value="wash">Wash/Maintenance</option>
-                            <option value="others">Other</option>
-                            <option value="cancel">Cancel</option>
-                          </select>
-                        </div>
-                        <div class="form-group input-group-lg" style="margin-top: 40px;">
-                          <div class="col-sm-5"></div>
-                          <textarea class=" alert form-rounded form-control col-sm-12" rows="2" id="comment"
-                            placeholder="description1" formControlName="description1"></textarea>
-  
-                        </div>
-                        <div class="form-group input-group-lg" style="margin-top: 40px;">
-                          <div class="col-sm-5"></div>
-                          <textarea class=" alert form-rounded form-control col-sm-12" rows="2" id="comment"
-                            placeholder="description2" formControlName="description2"></textarea>
-  
-                        </div>
-  
-                        <div class="">
-                          <label><input type="checkbox" formControlName="enquiry"> Enquery</label>
-  
-                        </div>
-  
-  
-                        <div class="row">
-                          <div class="col-md-4"></div>
-                          <div class="button_group">
-                            <button type="submit" class="btn  btn-sm btn-success" style="margin-right: 25px"
-                              (click)="saveAction(RegistrationForm.value)">submit</button>
-                          </div>
-                        </div>
+            <div class="col-sm-1"></div>
+            <div class="col-md-10">
+              <div class="row" style="margin-top: 80px;">
+                <div id="what-we-do">
+                  <form id="what-we-do" action="" method="post">
+
+                    <div class="col-md-6">
+                      <fieldset>
+                        <input name="name" type="text" class="form-control" id="name" placeholder=" Enter Tagline..."
+                          required>
+                      </fieldset><br>
+                    </div>
+                    <div class="col-md-6">
+                      <fieldset>
+                        <input name="name" type="text" class="form-control" id="name" placeholder="Last Number..."
+                          required>
+                      </fieldset><br>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <select id="category" class="  form-rounded form-control myinputcss col-sm-12 "
+                        placeholder="select category" formControlName="category">
+                        <option value="">Select Service Type</option>
+                        <option value="washing">wash</option>
+                        <option value="maintenance">Maintenance</option>
+                        <option value="wash">Wash/Maintenance</option>
+                        <option value="others">Other</option>
+                        <option value="cancel">Cancel</option>
+                      </select>
+
+
+                    </div>
+                    <div class="col-sm-6">
+                      <select id="category" class="  form-rounded form-control myinputcss col-sm-12 "
+                        placeholder="select category" formControlName="category">
+                        <option value="">Select Service Type</option>
+                        <option value="washing">wash</option>
+                        <option value="maintenance">Maintenance</option>
+                        <option value="wash">Wash/Maintenance</option>
+                        <option value="others">Other</option>
+                        <option value="cancel">Cancel</option>
+                      </select>
+                    </div>
+                    <div class="col-md-12" style="margin-top: 20px;">
+                      <fieldset>
+                        <textarea name="message" rows="1" class="form-control" id="message"
+                          placeholder="Enter Description 1..." required></textarea>
+                      </fieldset><br>
+                    </div>
+                    <div class="col-md-12">
+                      <fieldset>
+                        <textarea name="message" rows="1" class="form-control" id="message"
+                          placeholder="Enter Description 2..." required></textarea>
+                      </fieldset><br>
+                      <div class="">
+                        <label><input type="checkbox" formControlName="enquiry"> Enquery</label>
+
                       </div>
                     </div>
+                    <div class="col-md-12" style="margin-bottom: 10px;">
+                      <fieldset>
+                        <div style="text-align:center;" class="primary-button ">
+                          <a href="#">Submit</a>
+                        </div>
+                      </fieldset>
+                    </div>
+
                   </form>
                 </div>
-               
               </div>
-  
             </div>
-  
+
           </div>
         </div>
       </div>
-      <div style="margin-left: 100px;">
+    </div>
+    <div style="margin-left: 100px;">
       <table class="table table-hover table-dark  table-striped image mytable"
         style="margin-top:10px;margin-left:100px;margin-bottom:600px">
         <tr>
@@ -249,6 +240,6 @@
         </tr>
       </table>
     </div>
-    </form>
-  
-  </div>
+  </form>
+
+</div>

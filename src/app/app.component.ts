@@ -9,25 +9,21 @@ import { Router, NavigationStart } from '@angular/router';
 export class AppComponent {
   title = 'lastmarneproject';
   // showHead: boolean = false;
-
+  showHead: boolean = false;
   ngOnInit() {
   }
-
   constructor(private router: Router) {
   
-    // router.events.forEach((event) => {
-    //   if (event instanceof NavigationStart) {
-    //     if (event['url'] == '/Login' || event['url'] == '/Navbar') {
-    //       this.showHead = false;
-   
-
-    //     } else {
-   
-    //       this.showHead = true;
-       
-
-    //     }
-    //   }
-    // });
+    // on route change to '/login', set the variable showHead to false
+    router.events.forEach((event) => {
+      if (event instanceof NavigationStart) {
+        if (event['url'] == '/login' ) {
+          this.showHead = false;
+        } else {
+          // console.log("NU")
+          this.showHead = true;
+        }
+      }
+    })
   }
 }

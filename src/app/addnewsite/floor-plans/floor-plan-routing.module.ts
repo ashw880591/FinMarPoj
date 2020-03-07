@@ -4,9 +4,9 @@ import { FloorPlansComponent } from './floor-plans.component';
 
 
 const routes: Routes = [
-    {path:'',component:FloorPlansComponent} 
-    
-    
+  { path: '', component: FloorPlansComponent }
+
+
 ];
 
 @NgModule({

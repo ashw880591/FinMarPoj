@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationStart } from '@angular/router';
 
 @Component({
   selector: 'app-addnewsite',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./addnewsite.component.css']
 })
 export class AddnewsiteComponent implements OnInit {
-
-  constructor() { }
+  constructor() {
+  
+   
+  }
 
   ngOnInit() {
   }

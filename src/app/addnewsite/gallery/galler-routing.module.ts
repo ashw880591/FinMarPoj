@@ -4,9 +4,9 @@ import { GalleryComponent } from './gallery.component';
 
 
 const routes: Routes = [
-    {path:'',component:GalleryComponent} 
-    
-    
+  { path: '', component: GalleryComponent }
+
+
 ];
 
 @NgModule({

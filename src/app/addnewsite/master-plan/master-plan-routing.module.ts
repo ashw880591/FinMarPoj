@@ -4,9 +4,9 @@ import { MasterPlanComponent } from './master-plan.component';
 
 
 const routes: Routes = [
-    {path:'',component:MasterPlanComponent} 
-    
-    
+  { path: '', component: MasterPlanComponent }
+
+
 ];
 
 @NgModule({

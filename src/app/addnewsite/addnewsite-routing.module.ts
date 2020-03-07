@@ -3,21 +3,21 @@ import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { AddnewsiteComponent } from './addnewsite.component';
 
- const routes: Routes = [
-    {path:'',component:AddnewsiteComponent},
-    {path:'title',loadChildren:'./title/title.module#TitleModule'},
-    {path:'overview',loadChildren:'./overview/overview.module#OverviewModule'},
-    {path:'architects',loadChildren:'./architects-note/architects.module#ArchitectsModule'},
-    {path:'location',loadChildren:'./location-and-contact/location.module#LocationModule'},
-    {path:'gallery',loadChildren:'./gallery/gallery.module#GalleryModule'},
-    {path:'masterplan',loadChildren:'./master-plan/master-plan.module#MasterModule'},
-    {path:'floorplan',loadChildren:'./floor-plans/floor-plan-module#FloorPlanModule'},
-    {path:'specification',loadChildren:'./specifications/specification.module#SpecificationModule'},
-    {path:'broucher',loadChildren:'./broucher/broucher.module#BroucherModule'},
-    
-        // {path:'dashboard',component:DashboardComponent}
-    
-    
+const routes: Routes = [
+  { path: '', component: AddnewsiteComponent },
+  { path: 'title', loadChildren: './title/title.module#TitleModule' },
+  { path: 'overview', loadChildren: './overview/overview.module#OverviewModule' },
+  { path: 'architects', loadChildren: './architects-note/architects.module#ArchitectsModule' },
+  { path: 'location', loadChildren: './location-and-contact/location.module#LocationModule' },
+  { path: 'gallery', loadChildren: './gallery/gallery.module#GalleryModule' },
+  { path: 'masterplan', loadChildren: './master-plan/master-plan.module#MasterModule' },
+  { path: 'floorplan', loadChildren: './floor-plans/floor-plan-module#FloorPlanModule' },
+  { path: 'specification', loadChildren: './specifications/specification.module#SpecificationModule' },
+  { path: 'broucher', loadChildren: './broucher/broucher.module#BroucherModule' },
+
+  // {path:'dashboard',component:DashboardComponent}
+
+
 ];
 
 @NgModule({

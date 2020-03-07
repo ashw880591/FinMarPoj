@@ -4,9 +4,9 @@ import { SpecificationsComponent } from './specifications.component';
 
 
 const routes: Routes = [
-    {path:'',component:SpecificationsComponent} 
-    
-    
+  { path: '', component: SpecificationsComponent }
+
+
 ];
 
 @NgModule({
