@@ -31,7 +31,7 @@
                 <label for="" class="form-group">Description</label>
             </div>
             <div class="col-sm-12">
-                <textarea class="form-group" name="" id="" cols="144" rows="5" formControlName="description"></textarea >
+                <textarea class="form-group" name="description" id="description" cols="4" rows="1" formControlName="description"></textarea >
                 <div class="validation" *ngIf="ProjectOverview.controls['description'].hasError('required')
                 && (ProjectOverview.controls['description'].touched||ProjectOverview.controls['description'].dirty)">
                 <b>This field is requried</b>
