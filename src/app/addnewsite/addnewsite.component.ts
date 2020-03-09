@@ -7,6 +7,7 @@ import { Router, NavigationStart } from '@angular/router';
   styleUrls: ['./addnewsite.component.css']
 })
 export class AddnewsiteComponent implements OnInit {
+  
   constructor() {
   
    

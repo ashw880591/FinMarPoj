@@ -14,10 +14,7 @@ const routes: Routes = [
   { path: 'floorplan', loadChildren: './floor-plans/floor-plan-module#FloorPlanModule' },
   { path: 'specification', loadChildren: './specifications/specification.module#SpecificationModule' },
   { path: 'broucher', loadChildren: './broucher/broucher.module#BroucherModule' },
-
   // {path:'dashboard',component:DashboardComponent}
-
-
 ];
 
 @NgModule({

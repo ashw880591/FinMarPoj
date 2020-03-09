@@ -77,12 +77,10 @@
 
  -->
 
-
 <div class="container" id="what-we-do">
   <form action="" [formGroup]="RegistrationForm">
     <h1 style="color: white;">Main Slider Projects</h1>
-    <button type="submit" class="btn btn-success" style="margin-left: 70%;" data-toggle="modal" data-target="#myModal">Add
-      Slider Project</button>
+    <button type="submit" class="btn btn-success" style="margin-left: 80%;" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus" aria-hidden="true"></i>Add Slider Project</button>
     <div class="modal fade" id="myModal" role="dialog" style="margin-top: 90px;">
       <div class="modal-dialog">
         <!-- Modal content-->
@@ -92,7 +90,7 @@
             <div class="col-md-10">
               <div class="row" style="margin-top: 80px;">
                 <div id="what-we-do">
-                  <form id="what-we-do" action="" method="post">
+                  <form id="what-we-do" action="" method="post" [formGroup]="RegistrationForm">
                     <div class="col-md-6">
                       <fieldset>
                         <input name="tagline" type="text" class="form-control" id="tagline" placeholder=" Enter Tagline..."
@@ -101,18 +99,15 @@
                           && (RegistrationForm.controls['tagline'].touched||RegistrationForm.controls['tagline'].dirty)">
                           <b>This Field is requried</b>
                       </div>
-                      <div class="validation" *ngIf="RegistrationForm.controls['tagline'].hasError('pattern')">
-                          <b>Invalid contact number</b>
-                      </div> 
-                      </fieldset><br>
                      
-                    </div>
-                    <div class="col-md-6">
-                      <fieldset>
-                        <input name="name" type="text" class="form-control" id="name" placeholder="Last Number..."
-                          required>
                       </fieldset><br>
                     </div>
+                    <div class="col-sm-6">
+                      <fieldset>
+
+                      <input type="file" name="" id="" placeholder="Enter Architect Name" class="form-control form-group" >
+                    </fieldset><br>
+                  </div>
                     <div class="col-sm-6">
                       <select id="category" class="form-rounded form-control myinputcss col-sm-12 "
                         placeholder="select project" formControlName="category">
@@ -132,8 +127,8 @@
                   </div> 
                     </div>
                     <div class="col-sm-6">
-                      <select id="projectname" class="form-rounded form-control myinputcss col-sm-12 "
-                        placeholder="select project" formControlName="projectname">
+                      <select id="project_name" class="form-rounded form-control myinputcss col-sm-12 "
+                        placeholder="select project" formControlName="project_name">
                         <option value="">Select Project</option>
                         <option value="washing">wash</option>
                         <option value="maintenance">Maintenance</option>
@@ -141,52 +136,56 @@
                         <option value="others">Other</option>
                         <option value="cancel">Cancel</option>
                       </select>
-                      <div class="validation" *ngIf="RegistrationForm.controls['projectname'].hasError('required')
-                      && (RegistrationForm.controls['projectname'].touched||RegistrationForm.controls['projectname'].dirty)">
+                      <div class="validation" *ngIf="RegistrationForm.controls['project_name'].hasError('required')
+                      && (RegistrationForm.controls['project_name'].touched||RegistrationForm.controls['project_name'].dirty)">
                       <b>This Field is requried</b>
                   </div>
-                  <div class="validation" *ngIf="RegistrationForm.controls['projectname'].hasError('pattern')">
-                      <b>Invalid contact number</b>
-                  </div> 
+                 
                     </div>
                     <div class="col-md-12" style="margin-top: 20px;">
                       <fieldset>
                         <textarea name="message" rows="1" class="form-control" id="message"
-                          placeholder="Enter Description 1..." required formCotrolName="description1"></textarea>
+                          placeholder="Enter Description 1..." required formControlName="description1"></textarea>
                       </fieldset><br>
+                      <div class="validation" *ngIf="RegistrationForm.controls['description1'].hasError('required')
+                      && (RegistrationForm.controls['description1'].touched||RegistrationForm.controls['description1'].dirty)">
+                      <b>This Field is requried</b>
+                  </div>
                     </div>
                     <div class="col-md-12">
                       <fieldset>
                         <textarea name="message" rows="1" class="form-control" id="message"
-                          placeholder="Enter Description 2..." required formCotrolName="description2"></textarea>
+                          placeholder="Enter Description 2..." required formControlName="description2"></textarea>
                       </fieldset><br>
+                      <div class="validation" *ngIf="RegistrationForm.controls['description2'].hasError('required')
+                      && (RegistrationForm.controls['description2'].touched||RegistrationForm.controls['description2'].dirty)">
+                      <b>This Field is requried</b>
+                  </div>
                       <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
-                        <label class="custom-control-label" for="customCheck">Enquery</label>
+                        <input type="checkbox" class="custom-control-input" id="customCheck" name="example1" formControlName="enquiry">
+                        <label class="custom-control-label" for="customCheck" value="Yes">Enquery</label>
                       </div>
                     </div>
                     <div class="col-md-12" style="margin-bottom: 10px;">
                       <fieldset>
-                        <div style="text-align:center;" class="primary-button ">
-                          <a href="#">Submit</a>
-                        </div>
+                        <div class="">
+                  <button type="submit" class="btn btn-success" style="margin-left: 37%;" (click)="saveAction(RegistrationForm.value)"><b> SUBMIT</b></button>
+                      </div>
                       </fieldset>
                     </div>
                   </form>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
     </div>
-    <!-- <div style="margin-left: 100px;">
-      <table class="table table-hover table-dark  table-striped image mytable"
-        style="margin-top:10px;margin-left:100px;margin-bottom:600px">
+    <div style="margin-left: 16%;">
+      <table class="table table-hover table-dark  table-striped image mytable">
         <tr>
-          <th>Sr.No</th>
-          <th>Tagline</th>
+          <th >Sr.No</th>
+          <th >Tagline</th>
           <th>Category</th>
           <th>Project Name</th>
           <th>Enquiry</th>
@@ -202,8 +201,8 @@
           <td>Yes</td>
           <td>Test Description 1</td>
           <td>Test Description 2</td>
-          <td>Edit</td>
-          <td>Delete</td>
+          <td> <button type="submit" class="btn btn-warning" style="width: 90px; height: 40px;">Edit</button> </td>
+          <td> <button type="submit" class="btn btn-danger" style="width: 90px; height: 40px;">Delete</button> </td>
         </tr>
         <tr>
           <td>1</td>
@@ -213,8 +212,8 @@
           <td>Yes</td>
           <td>Test Description 1</td>
           <td>Test Description 2</td>
-          <td>Edit</td>
-          <td>Delete</td>
+          <td> <button type="submit" class="btn btn-warning"style="width: 90px; height: 40px;">Edit</button> </td>
+          <td> <button type="submit" class="btn btn-danger"style="width: 90px; height: 40px;">Delete</button> </td>
         </tr>
         <tr>
           <td>1</td>
@@ -224,8 +223,8 @@
           <td>Yes</td>
           <td>Test Description 1</td>
           <td>Test Description 2</td>
-          <td>Edit</td>
-          <td>Delete</td>
+          <td> <button type="submit" class="btn btn-warning"style="width: 90px; height: 40px;">Edit</button> </td>
+          <td> <button type="submit" class="btn btn-danger"style="width: 90px; height: 40px;">Delete</button> </td>
         </tr>
         <tr>
           <td>1</td>
@@ -235,8 +234,8 @@
           <td>Yes</td>
           <td>Test Description 1</td>
           <td>Test Description 2</td>
-          <td>Edit</td>
-          <td>Delete</td>
+          <td> <button type="submit" class="btn btn-warning"style="width: 90px; height: 40px;">Edit</button> </td>
+          <td> <button type="submit" class="btn btn-danger"style="width: 90px; height: 40px;">Delete</button> </td>
         </tr>
         <tr>
           <td>1</td>
@@ -246,11 +245,11 @@
           <td>Yes</td>
           <td>Test Description 1</td>
           <td>Test Description 2</td>
-          <td>Edit</td>
-          <td>Delete</td>
+          <td> <button type="submit" class="btn btn-warning"style="width: 90px; height: 40px;">Edit</button> </td>
+          <td> <button type="submit" class="btn btn-danger"style="width: 90px; height: 40px;">Delete</button> </td>
         </tr>
       </table>
-    </div> -->
+    </div> 
   </form>
 
 </div>

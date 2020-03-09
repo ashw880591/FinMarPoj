@@ -12,7 +12,7 @@ export class MainSliderService {
 
   //Service: Insert record to the DB: @RequestMapping(path = "/createBuilder") //
 
-  saveAllUser(data) {
+  saveAllMainSlider(data) {
 
     let url = ("http://localhost:8082/api/Marne/createMainSlider");
     return this.http.post(url, data);

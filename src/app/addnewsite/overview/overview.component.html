@@ -30,19 +30,24 @@
             <div class="col-sm-8">
                 <label for="" class="form-group">Description</label>
             </div>
-            <div class="col-sm-12">
-                <textarea class="form-group" name="description" id="description" cols="4" rows="1" formControlName="description"></textarea >
+            <div class="col-md-12" style="margin-top: 20px;">
+                <fieldset>
+                  <textarea name="message" rows="4" class="form-control" id="message"
+                     required formControlName="description"></textarea>
+                </fieldset><br>
                 <div class="validation" *ngIf="ProjectOverview.controls['description'].hasError('required')
                 && (ProjectOverview.controls['description'].touched||ProjectOverview.controls['description'].dirty)">
-                <b>This field is requried</b>
-              </div> 
+                <b>This Field is requried</b>
             </div>
+              </div>
         </div>
         <div class="">
             <button type="submit" class="btn btn-warning" (click)="GoBackToTitlePage()"  style="margin-left: 1%;">
-                <PREVIOUS</button>
+                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+<b> PREVIOUS</b></button>
         
-                    <button type="submit"   class="btn btn-success" style="margin-left: 73%;"  (click)="saveAction(ProjectOverview.value)">SAVE & NEXT></button>
+                    <button type="submit"   class="btn btn-success" style="margin-left: 73%;"  (click)="saveAction(ProjectOverview.value)"><b> SAVE & NEXT</b> &nbsp;<i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </button>
         </div>
     </form>
     

@@ -25,7 +25,7 @@ export class OverviewComponent implements OnInit {
    sersignup: any;
    temp:string
 
-  GoBackToTitlePage(){
+  GoBackToTitlePage(title){
     this.router.navigate(['/title'])
   }
 
