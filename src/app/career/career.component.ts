@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { headersToString } from 'selenium-webdriver/http';
 
 @Component({
   selector: 'app-career',

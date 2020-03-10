@@ -14,9 +14,8 @@ export class MainsliderComponent implements OnInit {
   RegistrationForm: FormGroup
   public mainregistration: any;
 
+  SessionBookingId: any;
   constructor(private servicemainslider: MainSliderService,private httpClient:HttpClient) {
-
-
     this.RegistrationForm = new FormGroup({
       tagline: new FormControl('', Validators.required),
       category: new FormControl('', Validators.required),
@@ -25,14 +24,23 @@ export class MainsliderComponent implements OnInit {
       description2: new FormControl('', Validators.required),
       enquiry: new FormControl('', Validators.required),
       // image: new FormControl('',Validators.required),
+      id:new FormControl()
     })
   }
   sersignup: any;
   temp:string
+
+
+  
+  sessionobj: any;
+  responseobj: any;
+  tempvar: any
   ngOnInit() {
+
+   
   }
   public saveAction(data: any) {
-    localStorage.setItem('key', data.mobileno);
+    localStorage.setItem('key', data.id);
     console.log(JSON.stringify(data));
 
     this.servicemainslider.saveAllMainSlider(data).subscribe
@@ -62,8 +70,6 @@ export class MainsliderComponent implements OnInit {
       let result = data;
 
     });
-
-
 
   }
 }

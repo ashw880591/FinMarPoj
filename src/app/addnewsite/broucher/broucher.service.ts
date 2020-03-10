@@ -13,7 +13,7 @@ export class BroucherService{
 
     saveAllBroucher(data) {
 
-        let url = ("http://localhost:8082/api/Marne/createProjectArchitectureNote");
+        let url = ("http://localhost:8082/api/Marne/createProjectBroucher");
         return this.http.post(url, data);
       }
 }

@@ -8,8 +8,6 @@ export class MainSliderService {
   constructor(private http: HttpClient) {
   }
 
-
-
   //Service: Insert record to the DB: @RequestMapping(path = "/createBuilder") //
 
   saveAllMainSlider(data) {
@@ -28,4 +26,13 @@ export class MainSliderService {
   //     let url="http://localhost:8082//api/Marne/getallbuilder"+fkid;
   //     return this.http.post(url,fkid);
   // }
+
+
+
+
+  public getById(id:String){
+    let url="http://localhost:8082/api/Marne/getAllMainSlider/"+id;
+       return this.http.get(url);
+}
+
 }
